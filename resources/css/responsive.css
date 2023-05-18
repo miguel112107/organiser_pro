@@ -1,0 +1,35 @@
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Common CSS */
+  h2 {
+    font-size: 1.625rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  /* Front page css*/
+  .welcome-notes h3 {
+    font-size: 1.75rem;
+  }
+  /* Admin index css */
+  .event-logo img {
+    width: 115px;
+  }
+  /* Client list */
+  .client-list-table td a,
+  .date-created {
+    font-size: 1rem !important;
+  }
+  /* Customer editing */
+  .customer-editing .input-group {
+    width: 80%;
+  }
+  /* Breadcrumb title */
+  .breadcrumb .fs-6 {
+    font-size: 1rem !important;
+  }
+  /* Event tabs */
+  .event-tabs .nav li a {
+    font-size: 1.125rem !important;
+  }
+}

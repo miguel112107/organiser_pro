@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Login | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header class="container header-area bg-white py-5">
+      <div class="row">
+        <div
+          class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto text-center"
+        >
+          <div class="header-logo pb-4">
+            <img class="img-fluid" src="assets/images/client_logo_example.png" alt="Barn Lights" />
+          </div>
+          <div class="welcome-notes">
+            <h2>Welcome to</h2>
+            <h1 class="fw-bold">Barn Lights Events and Weddings</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Sign In -->
+      <section class="container client-login pt-3">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <h3 class="fw-bold">Please sign in to manage your Event details</h3>
+            <form action="client-editor.html">
+              <div class="mb-3">
+                <label for="email-input-field" class="form-label">
+                  Sign in with your email
+                  </label>
+                <input type="email" class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark" id="email-input-field" />
+              </div>
+              <div class="mb-3">
+                <label for="form-password-field" class="form-label" >
+                  	Password
+                  </label>
+                <input type="password" class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark" id="form-password-field" />
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary mb-3 fs-5 text-capitalize" >
+                  Enter
+                </button>
+                <p class="UX_note">
+                Authorized users only. If you <strong>forgot your password</strong>, please call your venue or caterer at <code>TELEPHONE</code>. All IPs recorded for security. 
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Client End-user Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto pb-3">
+          <div class="footer-menu d-flex flex-row justify-content-center gap-5">
+            <a href="client-editor.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Home</a>
+            <a href="mailto:email@email.com"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold" >Customer Venue Email</a>
+            <a href="#"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold" >Sign out</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 text-center m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

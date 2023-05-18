@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Customer Editor | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header
+      class="container bg-white border-5 border-bottom border-secondary-subtle"
+    >
+      <div class="row py-4">
+        <div
+          class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto d-flex align-items-center gap-lg-4 gap-3"
+        >
+          <div class="event-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/event-calander.png"
+              alt="Event Calander"
+            />
+          </div>
+          <div class="brand-title">
+            <h2 class="fw-bold text-capitalize mb-lg-0">Event Organizer Pro</h2>
+            <h3 class="text-capitalize mb-lg-0">Admin manager</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+
+<main>
+      <!-- Breadcrumb -->
+      <div class="container">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto py-4" >
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="fs-6 text-dark fw-bold" href="admin-portal-home.html">All Customers</a>
+                </li>
+                <li
+                  class="breadcrumb-item active fs-6 text-dark fw-bold "
+                  aria-current="page" >
+                  Barn Lights Events and Weddings, LLC   <!-- truncate dynamically to be responsive to viewport no wrapping to 2nd line -->
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+<section class="container">
+<!-- Customer editor -->
+        <div class="row mt-8 mb-4 py-4">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <div class="heading-area">
+              <h3 class="text-capitalize">Customer editor {New Customer} <!-- Change H3 if this is a new record --></h3>
+            </div>
+            <!-- Customer Editor form -->
+            <form action="admin-customer-editor.html" class="customer-editing">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label fw-bold text-capitalize fs-6">
+                  Company Name
+                  </label>
+                <input type="text" class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark" id="exampleFormControlInput1" placeholder="Company name" />
+              </div>
+			<div class="mb-3 w-50">
+                <label  for="exampleFormControlInput1" class="form-label fw-bold text-capitalize fs-6">
+                  Handle for the Custom URL Path
+                  </label>
+                  <p class="UX_note">
+                  	Verify: https://eventorganizer.pro/barnlights/  &nbsp; <a href="" class="btn-link disabled"><i class="fa-regular fa-copy fs-6"></i></a> <!-- enable copy/paste button only when form is saved -->
+                  </p>
+                <input type="url" class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark" id="exampleFormControlInput1" placeholder="" />
+					<p class="UX_note">
+						25 chars max.
+					</p>
+              </div>
+
+<!-- primary staff admin -->
+	<fieldset>
+			<div class="mb-3">
+				<i class="fa-solid fa-user-circle"></i>
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Company's Primary Admin contact
+                  </label>
+                <input
+                  type="text"
+                  class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="First & Last" />
+              </div>
+
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Company Phone
+                  </label>
+                <input
+                  type="tel"
+                  class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="Ideally a mobile phone" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Contact's Email
+                  </label>
+                <input
+                  type="email"
+                  class="form-control bg-secondary-subtle border-1 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="" />
+              </div>
+		</fieldset>
+
+           <div class="mb-3">
+            <fieldset>
+                <label for="company_logo_file" class="form-label fw-bold text-capitalize fs-6">
+                  Company Logo
+                  </label>
+                  <!-- Show logo image if uploaded already -->
+                <div class="input-group mb-3">
+                  <div class="photo-icon me-3 d-inline-block">
+                    <i class="fa-regular fa-image fs-0"></i>
+                  </div>
+                  <input type="file" class="form-control d-inline-block file-hide border-0 p-0 rounded-3 w-25" id="company_logo_file" />
+                  
+					<label class="input-group-text ms-3 mb-2 mt-2 bg-secondary rounded-3 text-white fw-bold px-3" for="company_logo_file">
+                    Browse for Photo
+                	</label>
+                </div>
+                <p class="UX_note">
+                  Accepts JPG, PNG, or SVG. Resized to 300px W x *H
+                </p>
+            </fieldset>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </form>
+			  <p class="UX_note mt-3">The Customer can add as many Staff Admins as they would like, in their own Admin manager.
+			  </p>
+          </div>
+        <!-- end row --></div>
+</section>
+
+
+
+<section class="container">
+		<!-- Modules & Subscription levels  -->
+        <div class="row mt-8 mb-4 py-4">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+			<h4>
+				Enabled Modules & Subscription levels
+			</h4>
+
+            <div class="form-check form-check-inline fw-bold">
+                  <label class="form-check-label fs-6" for="module-timeline">
+                    Timeline Organizer
+                  </label>
+                  <input class="form-check-input fs-6 border-secondary-subtle"
+                    type="checkbox" value="" id="module-timeline" checked />
+                </div>
+                <div class="form-check form-check-inline fw-bold">
+                  <label class="form-check-label fs-6" for="module-menu-builder">
+                    Menu Designer
+                  </label>
+                  <input
+                    class="form-check-input fs-6 border-secondary-subtle" type="checkbox" value="" id="module-menu-builder" />
+                </div>
+
+			<p class="my-2 fs-6">
+                WIP/Future: Checking a module will cause the feature to appear in the customer’s Portal, or remove the feature. An automated "welcome" email can be sent. We'll need to work on the billing backend.
+              </p>
+          </div>
+        <!-- end row --></div>
+</section>
+
+<!-- Customer Password Reset  -->
+<section class="container">
+        <div class="row mt-8 mb-4 py-4">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+
+			<h4>
+				Customer Password Reset
+			</h4>
+				<p class="my-2 fs-6">
+				  If the customer's admin loses their password, they can initiate a pwd reset from their Portal. If they have trouble or call in, our tech support can also send the pwd reset email.
+				</p>
+
+			<form action="" name="Disable Customer access">			
+					<button type="submit" class="btn btn-secondary shadow-sm m-2 fs-6">
+					<i class="fa-solid fa-envelope me-2"></i>
+					  Reset Password 
+					</button>
+					<span>and email a link </span>
+
+					<div class="form-check my-2">
+						  <input
+							class="form-check-input border-dark"
+							type="checkbox"
+							id="disable_customer" />
+						  <label
+							class="form-check-label fw-bold fs-6"
+							for="disable_customer" >
+							Check this box then press the "Reset" button
+						  </label>
+					</div>
+            </form>
+				<p class="UX_note">
+					A link will be sent to the email on file with a reset action.
+				</p>
+
+          </div>
+        <!-- end row --></div>
+</section>
+
+<section class="container">
+        <div class="row mt-8 mb-4 py-4">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+
+	<!-- Disable Customer Account  -->
+				<div class="py-1 gap-3">
+					<h4>
+						Disable Customer Account
+					</h4>
+						<p class=" my-2 fs-6">
+						  This is a "soft-delete" action. The Customer will lose login access immediately, but no data is deleted. All content is preserved for our analytics and even future reactivation (lapsed payment).
+						</p>
+					<form action="" name="Disable Customer access">
+						<button type="submit" class="btn btn-danger m-2 shadow-sm fs-6" id="disable_customer">
+							<i class="fa-solid fa-ban me-2"></i>
+							Disable Customer 
+						</button>
+					<div class="form-check my-2">
+						  <input class="form-check-input border-dark" type="checkbox" id="disable_customer" />
+						  
+						  <label class="form-check-label fw-bold fs-6" for="disable_customer" >
+							Check this box then press "Disable" to remove the Customer's access.
+						  </label>
+					</div>
+					</form>
+			</div>
+          </div>
+        <!-- end row --></div>
+</section>
+
+</main>
+
+<!-- Admin Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

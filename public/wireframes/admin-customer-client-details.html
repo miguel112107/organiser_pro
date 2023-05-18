@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Client Detail List | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header
+      class="container bg-white border-5 border-bottom border-dark-subtle"
+    >
+      <div class="row py-4">
+        <div
+          class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto d-flex align-items-center gap-lg-4 gap-3"
+        >
+          <div class="event-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/event-calander.png"
+              alt="Event Calander"
+            />
+          </div>
+          <div class="brand-title">
+            <h2 class="fw-bold text-capitalize mb-lg-0">Event Organizer Pro</h2>
+            <h3 class="text-capitalize mb-lg-0">Admin manager</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Breadcrumb -->
+      <div class="container">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto py-4" >
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="admin-portal-home.html" class="fs-lg-4 fs-6 text-dark fw-bold">All Customers</a>
+                </li>
+                <li
+                  class="breadcrumb-item active fs-lg-4 fs-6 text-dark fw-bold" aria-current="page">
+                  Barn Lights Events and Weddings LLC
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Client list -->
+      <section class="container">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <div name="heading-area">
+              <h3>This Customer's Client List</h3>
+              <p>
+                These are the <strong>32</strong> event clients created by this <a href="admin-customer-editor.html" title="Edit this Customer's record">Customer</a>. We can see this info to help us with data analytics. 
+              </p>
+            </div>
+
+              <ul>
+              <li><strong>Customer's Primary Admin:</strong> Jane Doe. 
+              <li><strong>Email:</strong> <a href="mailto:bob@customer.com">bob@customer.com</a>
+              <li><strong>Phone:</strong> +1 207-111-2222
+              <li><strong>Last login:</strong> Dec. 12, 2022
+              </ul>
+
+            <!-- Client list table -->
+            <div class="client-list-table border border-2 rounded-3 p-3 pb-0 ">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-capitalize fs-6 fw-bold fst-italic" >
+                      <i class="fa-solid fa-user-edit"></i> Client name
+                    </th>
+                    <th scope="col" class="text-capitalize fs-6 fw-bold fst-italic  " >
+                      Date created
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" aria-disabled="true">First Name Last Name</a>
+                    </td>
+                    <td class="fs-5 fst-italic date-created">YYYY/MM/DD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+			<p class="mt-3">
+			Notes here.
+			<p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Admin Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

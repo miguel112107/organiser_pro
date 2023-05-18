@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer - Client Editor | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header class="container bg-white border-5 border-bottom border-secondary-subtle">
+      <div class="row py-4">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto text-center">
+          <div class="main-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/client_logo_example.png"
+              alt="Barn Lights logo"
+            />
+          </div>
+          <div class="brand-title">
+            <h2 class="text-capitalize mb-lg-0 fs-4">
+              Welcome to <span class="fw-bold">Event Organizer Pro</span>
+            </h2>
+            <!-- 
+            This template is for all three user types to view. Modes:
+            1. Super Admin: EOP's staff to view to help troubleshoot for our Customers
+            2. Customers: the venue's admin staff can make edits, lock, and archive this customer record.
+            3. End-user Clients, to update their own info. if end-user client mode, use class "d-none" in the H2 
+            -->
+            <h3 class="text-capitalize mb-lg-0 d-none">
+              Gather your <span class="fw-bold">Event's details!</span>
+            </h3>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Breadcrumb -->
+      <div class="container">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto py-4">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="fs-lg-4 fs-6 text-dark fw-bold" href="customer-portal-home.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active fs-lg-4 fs-6 text-dark fw-bold" aria-current="page" >
+                  Your Client Details
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <section class="container">
+        <!-- Client detail record -->
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <div class="heading-area">
+			<!-- first name 1  + first name 2 concatenate together -->
+              <h3>
+              Darcie & Justin
+              </h3>
+              <!-- Modified date client & admin -->
+              <p class="UX_note mb-0">
+                Last modified by {Client first name}: Dec. 12, 2022
+              </p>
+              <p class="UX_note mb-0">
+                Last modified by {Staff first name}: Feb. 1, 2023
+              </p>
+
+		<!-- Status bar - lock/unlock status, and archive  -->              
+              <div class="d-flex justify-content-between client-status">
+              
+                <div class="lock-unlock fw-bold fs-6">
+                    <!-- show one at a time, toggle the UI state (lock or unlock) as admin changes it -->
+                
+				<button class="btn-link p-1 m-0 bg-none border-0 text-decoration-none">
+				<i class="fa-solid fa-unlock-keyhole text-primary"></i> Unlocked
+				</button>
+				<!-- or -->
+               	<button class="btn-link p-1 m-0 bg-none border-0 text-decoration-none">
+               	<i class="fa-solid fa-lock"></i> Locked
+               	</button>
+
+                </div>
+                
+                <div class="fw-bold fs-6">
+                	<!-- only a customer admin can archive or unarchive a client -->
+                  <button class="btn-link p-1 m-0 bg-none border-0 text-decoration-none" title="Close and Archive this record">
+                 	 Archived <i class="fa-solid fa-box-archive text-primary"></i>
+                  </button>
+					<!-- or -->
+                  <button class="btn-link p-1 m-0 bg-none border-0 text-decoration-none" title="Close and Archive this record">
+                 	 Archive ? <i class="fa-solid fa-box-archive"></i>
+                  </button>
+                </div>
+
+			<!-- end status bar -->
+			</div>
+<!-- end row -->
+</div>
+
+<!-- Start Event Details all (3) tabs -->
+            <div class="event-tabs">
+              <ul class="nav nav-tabs border-5 border-bottom">
+                <li class="nav-item pb-3">
+                  <a
+                    class="nav-link active text-capitalize fw-bold border-0 text-dark fs-5 p-0"
+                    href="#eventDetails"
+                    data-bs-toggle="tab">
+                    Event Details
+                	</a>
+                </li>
+                <li class="nav-item pb-3">
+                  <a
+                    class="nav-link text-capitalize fw-bold border-0 text-dark fs-5 p-0"
+                    href="#layout"
+                    data-bs-toggle="tab">
+                    Layout & Decor
+                    </a>
+                </li>
+                <li class="nav-item pb-3">
+                  <a
+                    class="nav-link text-capitalize fw-bold border-0 text-dark fs-5 p-0"
+                    href="#foodDrink"
+                    data-bs-toggle="tab">
+                    Food & Drink
+                    </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+					<!-- All content for (3) tabs -->
+                <div class="tab-pane active py-lg-5 py-2" id="eventDetails">
+                  <div class="row">
+                    <div class="col-12">
+                    
+			  <!-- Event details form -->
+			  <form action="#" class="event-details-form">
+                      
+				  <div class="row mb-3">
+						<div class="col-5">
+							<label
+                            for="client-password"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Password <span class="UX_note">(Auto-generated)</span>
+                            </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark"
+                            id="client-password" placeholder="{pwd_value}" disabled readonly />
+
+						<!--
+						Visible to Client.
+						Example: bolducdrover
+						Formula: person1_last_name + person2_last_name
+						Code can allow only one contact (person1's details); just omit the 2nd person in the auto-generated pwd + URL
+						-->
+                        </div>
+						<div class="col-5">
+							<label
+                            for="client-custom-url"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            URL <span class="UX_note">(Auto-generated)</span>
+                            </label>
+						<!--
+						Visible to Client.
+						Example: Michelle-Rob-8-6-2022  
+						Formula:  person1_first name + person2_first name + event_date MM-DD-YYYY 
+						-->
+
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark"
+                            id="client-custom-url" placeholder="{URL to couple's page'}" disabled readonly />
+                        </div>
+				<!-- end mini Row --></div>
+						
+<fieldset>
+                        <div class="mb-3">
+						<i class="fa-solid fa-user-edit"></i>
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Couple's names
+                            </label>
+									  <div class="row g-3 mb-3"><!-- 1st person -->
+										<label
+										for="exampleFormControlInput1"
+										class="form-label  fs-6">
+										Person 1: 
+										</label>
+										<div class="col-5 mt-0">
+										  <input
+											type="text"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark" aria-label="First name" placeholder="First" />
+										</div>
+										<div class="col-7 mt-0">
+										  <input
+											type="text"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark" aria-label="Last name" placeholder="Last" />
+										</div>
+									  </div>
+									  <div class="row g-3 mb-3"><!-- 2nd person -->
+										<label
+										for="exampleFormControlInput1"
+										class="form-label  fs-6">
+										Person 2: 
+										</label>
+										<div class="col-5 mt-0">
+										  <input
+											type="text"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark" aria-label="First name" placeholder="First" />
+										</div>
+										<div class="col-7 mt-0">
+										  <input
+											type="text"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark" aria-label="Last name" placeholder="Last" />
+										</div>
+									  <!--end row --></div>
+					<!-- end couple name --></div>
+				
+					 <div class="row g-3 mb-3">
+ 							<label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold  fs-6">
+                            Couple's Emails:  
+                            <br />
+                            <span class="UX_note">Both are required to receive the emailed e-sign contracts</span>
+                            </label>
+ 							<div class="col-6 mt-0">
+										<label
+										for="person-1-email"
+										class="form-label  fs-6">
+										Person 1: 
+										</label>
+									  <input
+										type="email"
+										class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+										id="person-1-email" />
+                            </div>
+							<div class="col-6 mt-0">
+										<label
+										for="person-2-email"
+										class="form-label  fs-6">
+										Person 2: 
+										</label>
+										<input
+											type="email"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark"
+											id="person-2-email" />
+                        	</div>
+<!-- close row --></div>
+                        
+					 <div class="row g-3 mb-3">
+                          <label
+                            for="cell-phones"
+                            class="form-label fw-bold  fs-6">
+                            Cell phones:
+                            <br />
+                            <span class="UX_note">At least one mobile phone is required to receive texts</span>
+                            </label>
+ 							<div class="col-6 mt-0">
+										<label
+										for="Person-1-phone"
+										class="form-label  fs-6">
+										Person 1: 
+										</label>
+									  <input
+										type="email"
+										class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+										id="Person-1-phone" />
+                            </div>
+							<div class="col-6 mt-0">
+										<label
+										for="Person-2-phone"
+										class="form-label  fs-6">
+										Person 2: 
+										</label>
+										<input
+											type="email"
+											class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark"
+											id="Person-2-phone" />
+                        	</div>
+                        </div>
+</fieldset>
+
+                       <div class="mb-3">
+                       <!-- Dev Note: Package Choice is set by the staff, then locked "disabled" on the customer end-user side so it can't be changed. Enable for Staff Admin... disable for end-user clients -->
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-5">
+                            Package choice: &nbsp; 
+                            </label> 
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="Package_1" >
+								  <label class="form-check-label" for="Package_1">
+									Package 1
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="Package_2" checked  >
+								  <label class="form-check-label" for="Package_2">
+									Package 2
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="Package_2R"  >
+								  <label class="form-check-label" for="Package_2R">
+									Package 2-R
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="Package_3"  >
+								  <label class="form-check-label" for="Package_3">
+									Package 3
+								  </label>
+								</div>
+						</div>
+                        
+<fieldset>
+					 <div class="row g-3 mb-3">
+
+                        <div class="col-4 mt-3">
+                          <label
+                            for="check-in-date"
+                            class="form-label fw-bold text-capitalize fs-6">Check-in date</label>
+                          <input
+                            type="date"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="check-in-date" />
+                        </div>
+                        <div class="col-4 mt-3">
+                          <label
+                            for="wedding-date"
+                            class="form-label fw-bold text-capitalize fs-6">Wedding Date</label>
+                          <input
+                            type="date"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="wedding-date"  />
+                        </div>
+                        <div class="col-4 mt-3 ">
+                          <label
+                            for="check-out-date"
+                            class="form-label fw-bold text-capitalize fs-6">Check-out date</label>
+                          <input
+                            type="date"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="check-out-date" />
+                        </div>
+                        <div class="col-12 mb-0">
+                          <label
+                            for="arrival-time-notes"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Arrival time notes
+                            </label>
+								<textarea
+								class="form-control bg-secondary-subtle border-1"
+								id="arrival-time-notes" rows="4"></textarea>
+                        </div>
+				<!--End time and date info --></div>
+</fieldset>
+
+<fieldset>
+                        <div class="mt-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Parents' Names
+                            </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+                    <div class="row">    
+                        <div class="col">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Wedding Party Size
+                            </label>
+                          <input
+                            type="number"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+                        <div class="col"">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Guest Count: Adults
+                            </label>
+                          <input
+                            type="number"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+                        <div class="col">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Children under 12yo
+                            </label>
+                          <input
+                            type="number"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+					<!--end row --></div>
+
+                        <div class="">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold  fs-6">
+                            Wedding Day-of Contact Person
+                            <br />
+                            <span class="UX_note">If our manager has questions and cannot reach you, this person has your authority to make last-minute decisions!</span>
+                            </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+
+</fieldset>
+
+<!-- new fields for Wedding Coordinator April 14, 2023 -->
+<fieldset name="fieldset">
+                    <div class="my-2">
+						<label
+                            for="wedding-coordinator"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Wedding Coordinator's Name:   
+                        </label>
+                          <span class="UX_note">Leave blank if you do not have one. Their contact info is optional.</span>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="wedding-coordinator" />
+                            
+						  <div class="row mb-0">
+							<div class="col">
+								<label
+									for="wedding-coordinator-email"
+									class="form-label fw-bold text-capitalize fs-6">
+									Email:  
+								</label>
+								  <input
+									type="text"
+									class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+									id="wedding-coordinator-email" />
+								</div>
+							<div class="col">
+								<label
+									for="wedding-coordinator-phone"
+									class="form-label fw-bold text-capitalize fs-6">
+									Mobile Phone:  
+								</label>
+								  <input
+									type="text"
+									class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+									id="wedding-coordinator-phone" />
+							</div>
+							</div>
+                     </div>
+</fieldset>
+
+<!-- new fields for vendors April 14, 2023-->
+<fieldset name="fieldset">
+                    <div class="my-2">
+						<h4>Vendors</h4>
+						<label
+                            for="vendor-1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Vendor 1: (Name and Description)  
+                        </label>
+                          <span class="UX_note">Leave blank if you do not have any. Their contact info is optional.</span>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="vendor-1" />
+                            
+                      <div class="row mb-0" name="vendor group 1">
+						<div class="col">
+						<label
+                            for="vendor-email-1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Email:   
+                        </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="vendor-email-1" />
+                        </div>
+                        <div class="col">
+						<label
+                            for="vendor-phone-1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Mobile Phone:  
+                        </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="vendor-phone-1" />
+                        </div>
+                    </div><!-- end the vendor group row -->
+
+					<!-- add additional vendor group here -->
+		
+					<form action="admin-customer-editor.html">
+							<button type="submit" class="btn btn-secondary">
+								<i class="fa-solid fa-square-plus me-1"></i> Add Another Vendor
+							</button> <span class="UX_note"> Add up to 10</span>
+					</form>
+
+                 </div>
+</fieldset>
+
+				
+<fieldset>				
+                        <div class="mt-3 mb-3">
+
+						<label
+                            for="first_look_yes"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            First Look:  &nbsp; 
+                        </label>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="first_look_yes" >
+								  <label class="form-check-label" for="first_look_yes">
+									Yes
+								  </label>
+								</div>
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="first_look_no"  >
+								  <label class="form-check-label" for="first_look_no">
+									No
+								  </label>
+								</div>
+                        </div>
+
+                        <div class="mb-3">
+                          <label
+                            for="ceremony_wooded"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Ceremony location &nbsp;
+                            </label>
+
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ceremony_wooded" >
+								  <label class="form-check-label" for="ceremony_wooded">
+									Wooded
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ceremony_lawn" checked >
+								  <label class="form-check-label" for="ceremony_lawn">
+									Lawn
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ceremony_tent"  >
+								  <label class="form-check-label" for="ceremony_tent">
+									Rental Tent
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ceremony_barn"  >
+								  <label class="form-check-label" for="ceremony_barn">
+									Inside Barn
+								  </label>
+								</div>
+								  <p class="UX_note">There is a large clearing between the Barn and Saltbox for a tent up to 40'x60'. Wedding Tents are not allowed on the ceremony lawn.</p>
+                        <!--End ceremony location--></div>
+</fieldset>
+
+<fieldset>
+					<div class="row">
+                        <div class="col">
+                          <label
+                            for="ceremony-time"
+                            class="form-label fw-bold text-capitalize fs-6">Ceremony time</label>
+                          <input
+                            type="time"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="ceremony-time"  />
+                        </div>
+                        <div class="col">
+                          <label
+                            for="ceremony-length"
+                            class="form-label fw-bold text-capitalize fs-6">Ceremony length</label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="ceremony-length" />
+                        </div>
+                    <!--end row --></div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">Ceremony notes</label>
+							  <textarea
+								class="form-control bg-secondary-subtle border-1"
+								id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+</fieldset>
+
+<fieldset>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">Cocktail Reception: Time</label>
+                          <input
+                            type="time"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">Cocktail Reception: Notes</label>
+								<textarea
+								class="form-control bg-secondary-subtle border-1"
+								id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+</fieldset>
+
+<fieldset>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Grand Entrance
+                            </label>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="grand_entrance_yes" >
+								  <label class="form-check-label" for="grand_entrance_yes">
+									Yes
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="grand_entrance_no"  >
+								  <label class="form-check-label" for="grand_entrance_no">
+									No
+								  </label>
+								</div>
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Introductions, Speeches & Dances
+                            </label>
+							  <textarea
+								class="form-control bg-secondary-subtle border-1"
+								id="exampleFormControlTextarea1" rows="4">
+								</textarea>
+                        </div>
+
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">
+                            Parent/Child Dances
+                            </label>
+                          <input
+                            type="text"
+                            class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                            id="exampleFormControlInput1" />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">DJ or Band - Entertainment notes
+                            </label>
+                          <textarea
+                            class="form-control bg-secondary-subtle border-1"
+                            id="exampleFormControlTextarea1" rows="4" >
+                            </textarea>
+                        </div>
+</fieldset>
+
+            <!-- All Tabs Save Button -->
+                    <div class="col-12 mt-lg-5 mt-3">
+                          <button
+                            type="submit"
+                            class="btn btn-primary text-capitalize" >
+                            Save Changes (Event Details)
+                          </button>
+                    </div>
+	                <p class="mt-2 UX_note">Saves all 3 tab's info</p>
+                      </form>
+                    </div>
+                  </div>
+<!-- end 1st tab --></div>
+                
+<!-- 2nd Tab layout -->
+                <div class="tab-pane py-lg-5 py-2" id="layout">
+                  <div class="row">
+                    <div class="col-12">
+                      <!-- Layout & decor form -->
+                      <form action="#" class="layout-decor-form">
+
+<fieldset>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label fw-bold text-capitalize fs-6">Layout & Decor Notes</label>
+                            <textarea
+                              class="form-control bg-secondary-subtle border-1"
+                              id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Dance floor notes
+                              </label>
+                            <textarea
+                              class="form-control bg-secondary-subtle border-1"
+                              id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+</fieldset>
+
+<fieldset>
+						<div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Cake Display
+                              </label>
+                            <input
+                              type="text"
+                              class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                              id="exampleFormControlInput1" />
+                          </div>
+                        <div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Dessert Display
+                              </label>
+                            <input
+                              type="text"
+                              class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                              id="exampleFormControlInput1" />
+                          </div>
+</fieldset>
+<fieldset>
+						<div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6 d-block">
+                              Linens (Cloth Napkins) Choice: &nbsp; 
+                              </label>
+
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="linens-black" >
+								  <label class="form-check-label" for="linens-black">
+									Black
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="linens-navy-blue" >
+								  <label class="form-check-label" for="linens-navy-blue">
+									Navy Blue
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="linens-cream" >
+								  <label class="form-check-label" for="linens-cream">
+									Cream
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="linens-blush-rose"  >
+								  <label class="form-check-label" for="linens-blush-rose">
+									Blush Rose
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="linens-client-provides"  >
+								  <label class="form-check-label" for="linens-client-provides">
+									You will provide
+								  </label>
+								</div>
+
+                          <!--End napkins --></div>
+                        <div class="mb-3">
+                            <label
+                              for="place-setting-chargers"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Place-setting Chargers?   <span class="UX_note">We have gold chargers you can use</span>
+                              </label>
+                            <input
+                              type="text"
+                              class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                              id="place-setting-chargers" />
+                          </div>
+                        <div class="mb-3">
+				<i class="fa-solid fa-chair"></i>
+                            <label
+                              for=""
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Table Layout - Couple and wedding party:
+                              </label>
+								<br />
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table_layout_sweetheart" >
+								  <label class="form-check-label" for="table_layout_sweetheart">
+									Sweetheart
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table_layout_head" >
+								  <label class="form-check-label" for="table_layout_head">
+									Head Tables
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table_layout_king" >
+								  <label class="form-check-label" for="table_layout_king">
+									King U shape
+								  </label>
+								</div>
+                          <!--End couple tables --></div>
+                          
+                        <div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6 d-block">
+                              Table Layout - Guests: &nbsp;
+                              </label>
+	
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table-layout-herringbone" >
+								  <label class="form-check-label" for="table-layout-herringbone">
+									Herringbone (angled rows)
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table-layout-farm" >
+								  <label class="form-check-label" for="table-layout-farm">
+									Farm Style (long joined rows)	
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="table-layout-horizontal" >
+								  <label class="form-check-label" for="table-layout-horizontal">
+									Horizontal (sideways across)
+								  </label>
+								</div>
+                          <!--End guest table layouts--></div>
+                          
+                        <div class="mb-3">
+                            <label
+                              for="exampleFormControlInput1"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Table layout - Overall Notes
+                              </label>
+                        <textarea
+                          class="form-control bg-secondary-subtle border-1"
+                          id="tablelayout-overall-notes" rows="3"></textarea>
+                          </div>
+							<p class="UX_note">
+								All of these options will be discussed during your onsite visits.
+							</p>
+</fieldset>
+
+<fieldset>
+						<div class="mb-3">
+                            <label
+                              for="lawn-games-notes"
+                              class="form-label fw-bold text-capitalize fs-6" >
+                              Lawn Games Notes</label>
+                            <input
+                              type="text"
+                              class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                              id="lawn-games-notes" />
+                          </div>
+                        <div class="mb-3">
+                            <label
+                              for="patio-fires-notes"
+                              class="form-label fw-bold text-capitalize fs-6">
+                              Patio Fires Notes</label>
+                            <input
+                              type="text"
+                              class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                              id="patio-fires-notes" />
+                          </div>
+</fieldset>
+<!-- Button -->
+                    <div class="col-12 mt-lg-5 mt-3">
+						<button
+						  type="submit"
+						  class="btn btn-primary text-capitalize" >
+						  Save Changes (Layout & Decor)
+						</button>
+	                <p class="mt-2 UX_note">Saves all 3 tab's info</p>				
+                    </div>
+<!-- end 2nd tab form --></form>      
+
+                  </div>
+                </div>
+<!-- end 2nd Tab --></div>
+
+<!-- 3rd Tab Food and Drink -->
+              <div class="tab-pane py-lg-5 py-2" id="foodDrink">
+                <div class="row">
+                  <div class="col-12">
+                    <!-- Food & drink form -->
+                    <form action="#" class="layout-decor-form">
+
+<fieldset>
+					<div class="mb-3">
+                        <i class="fa-solid fa-glass-martini-alt"></i>
+                        <label
+                          for="bar-plan-notes"
+                          class="form-label fw-bold text-capitalize fs-6">
+                          Bar Plan Notes
+                          </label>
+                        <textarea
+                          class="form-control bg-secondary-subtle border-1"
+                          id="bar-plan-notes" rows="3"></textarea>
+                          <p class="UX_note d-none">
+                          Options include: cash & credit only (guests purchases their own); limited prepaid open tab; full prepaid open bar tab; drink tokens; and combinations of any of these!
+                          </p>
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="bar-service-pause"
+                        class="form-label fw-bold  fs-6">
+                        Bar Service - Pauses?  <span class="UX_note">Pause service during key moments</span>
+                        </label>
+                      <input
+                        type="text"
+                        class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                        id="bar-service-pause" />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="bar-signature-cocktails"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Signature cocktails <span class="UX_note">Optional</span>
+                        </label>
+							  <textarea
+								class="form-control bg-secondary-subtle border-1"
+								id="bar-signature-cocktails" rows="2"></textarea>
+                    </div>
+</fieldset>                
+<fieldset>                    
+
+                    <div class="mb-3">
+				<i class="fa-solid fa-utensils"></i>
+                      <label
+                        for=""
+                        class="form-label fw-bold text-capitalize fs-6  ">
+                        Dinner (or main Meal) Service style
+                        </label>
+					<br />
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="service-buffet" >
+								  <label class="form-check-label" for="service-buffet">
+									Buffet
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="service-plated" >
+								  <label class="form-check-label" for="service-plated">
+									Plated
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="service-family"  >
+								  <label class="form-check-label" for="service-family">
+									Family
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="service-outside-caterer"  >
+								  <label class="form-check-label" for="service-outside-caterer">
+									Outside Caterer
+								  </label>
+								</div>
+<p class="UX_note">For guidelines on using an outside catering vendor, see <a href="https://barnlightsweddingevents.com/catering-service/" target="_blank">our website</a>.</p>
+<!-- DEV: this would need to be a variable set in the Client Admin setting page. or else we need to hardcode the URLs for our clients  -->
+<!--End catering plan choices--></div>
+
+                    <div class="mb-3">
+                      <label
+                        for="dinner-service-time"
+                        class="form-label fw-bold text-capitalize fs-6"
+                        >Dinner/Meal Service Time</label>
+                      <input
+                        type="time"
+                        class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                        id="dinner-service-time" />
+                    </div>
+
+                    <div class="mb-3">
+                      <label
+                        for="breakfast"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Day of breakfast or brunch?
+                        </label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="breakfast" rows="2"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label
+                        for="late-night"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Late Night Snack?
+                        </label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="late-night" rows="2"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label
+                        for="farewell-brunch"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Farewell Brunch?  <span class="UX_note">Usually on check-out day</span>
+                        </label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="farewell-brunch" rows="2"></textarea>
+                    </div>
+</fieldset>
+
+<fieldset>
+				<div class="mb-3">
+				<i class="fa-solid fa-utensils"></i>
+                      <label
+                        for="rehearsal-dinner"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Rehearsal Dinner in Barn ?
+                        </label>
+
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="rehearsal_dinner_yes" >
+								  <label class="form-check-label" for="rehearsal_dinner_yes">
+									Yes
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="rehearsal_dinner_no" >
+								  <label class="form-check-label" for="rehearsal_dinner_no">
+									No
+								  </label>
+								</div>
+                        <p class="UX_note">The barn is available the night before for your rehearsal dinner with Packages 2-R & 3. For Package 1 or 2, please inquire.</p>
+
+
+					</div>
+					
+					<div class="row">
+                    <div class="col mb-3">
+                      <label
+                        for="rehearsal_dinner_date"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Rehearsal Dinner Date
+                        </label>
+                      <input
+                        type="date"
+                        class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                        id="rehearsal_dinner_date" />
+                    </div>
+                    <div class="col mb-3">
+                      <label
+                        for="rehearsal-dinner-guest-count"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Rehearsal Dinner: Guest count
+                        </label>
+                      <input
+                        type="number"
+                        class="form-control bg-secondary-subtle border-1 py-2 fs-6 text-dark mb-3"
+                        id="rehearsal-dinner-guest-count" />
+                    </div>
+                    <!--end row --></div>
+                    <div class="mb-3">
+                      <label
+                        for="rehearsal-dinner-bartender"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Rehearsal Dinner: Bartender needed: &nbsp;
+                        </label>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="rehearsal_dinner_bar_yes" >
+								  <label class="form-check-label" for="rehearsal_dinner_bar_yes">
+									Yes
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="rehearsal_dinner_bar_no" >
+								  <label class="form-check-label" for="rehearsal_dinner_bar_no">
+									No
+								  </label>
+								</div>
+					 <p class="UX_note">Our bartender is required if alcohol is served</p>
+                    <!--end row --></div>
+                    
+                    <div class="mb-3">
+                      <label
+                        for="rehearsal-dinner-bar-notes"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Rehearsal Dinner and Bar Notes
+                        </label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="rehearsal-dinner-bar-notes" rows="4"></textarea>
+                    </div>
+</fieldset>
+<fieldset>
+                    <div class="mb-3">
+                      <label
+                        for="sever-allergies"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Severe Allergies (Couple or Guests): &nbsp;
+                        </label>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="severe-allergies-yes" >
+								  <label class="form-check-label" for="severe-allergies-yes">
+									Yes
+								  </label>
+								</div>
+								<div class="form-check  form-check-inline">
+								  <input class="form-check-input" type="radio" name="flexRadioDefault" id="severe-allergies-no" >
+								  <label class="form-check-label" for="severe-allergies-no">
+									No
+								  </label>
+								</div>
+					 <p class="UX_note">If anyone has life-threatening allergies we require that those meals be prepared in certified facilities by external provider, for their safety. Our kitchen is not certified 100% allergen-free. </p>
+                    <!--end row --></div>
+
+                    <div class="mb-3">
+                      <label
+                        for="severe-allergies-notes"
+                        class="form-label fw-bold text-capitalize fs-6">
+                        Severe Allergies Notes
+                        </label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="severe-allergies-notes" rows="4"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="special-dietary-needs"
+                        class="form-label fw-bold text-capitalize fs-6"
+                        >Special Dietary Needs:</label>
+                      <textarea
+                        class="form-control bg-secondary-subtle border-1"
+                        id="special-dietary-needs" rows="4"></textarea>
+                    </div>
+</fieldset>
+                    <!-- Button -->
+                    <div class="col-12 mt-lg-5 mt-3">
+							<button type="submit" class="btn btn-primary" >
+							  Save Changes (Food & Drink)
+							</button>
+					</div>
+	                <p class="mt-2 UX_note">Saves all 3 tab's info</p>
+
+			<!-- end form--></form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!-- Customer Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto pb-3">
+          <div class="footer-menu d-flex flex-row justify-content-center gap-5">
+            <a
+              href="#"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Home</a>
+            <a
+              href="#"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold" >Support</a>
+            <a
+              href="#"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold" >Sign out</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 text-center m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

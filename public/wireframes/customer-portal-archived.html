@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Portal Home | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header class="container bg-white border-5 border-bottom border-dark-subtle">
+      <div class="row py-4">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto text-center">
+          <div class="main-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/client_logo_example.png"
+              alt="Your customer logo" />
+          </div>
+          <div class="brand-title">
+            <h2 class="text-capitalize mb-lg-0">
+              Welcome to <span class="fw-bold">Event Organizer Pro</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Client list -->
+      <section class="container py-lg-5 py-3">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <div class="heading-area">
+              <h3>Your Client Archives</h3>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <p>
+                  These are your <span class="fs-6 fw-bold">24</span> archived clients. Their data contributes to your historical reports.&nbsp; If ever necessary you can unarchive them.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </p>
+                <p class="d-none">
+                  These are your <span class="fs-6 fw-bold">222</span> archived clients.
+                </p>
+
+              </div>
+            </div>
+            
+            <!-- Client list table -->
+            <div class="client-list-table border border-2 rounded-3 p-3 mt-4">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-capitalize fs-6 fw-bold fst-italic" >
+                      Client name <span class="UX_note">Click to View/Edit</span>
+                    </th>
+                    <th scope="col" class="text-capitalize fs-6 fw-bold fst-italic " >
+                      Archived date
+                    </th>
+                    <th scope="col" class="text-capitalize fs-6 fw-bold fst-italic" >
+                    Status  <span class="UX_note">View record to change status</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fs-6">
+                      <a role="link" href="customer-client-editor.html" >Ashleigh and James</a>
+                    </td>
+                    <td class="fs-6 fst-italic date-created">
+                    YYYY/MM/DD
+                    </td>
+                    <td class="fs-6" >
+					<button class="btn-link p-1 m-0 bg-white border-0 text-decoration-none" title="Archived record">
+					  Archived <i class="fa-solid fa-box-archive"></i>
+					</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" >Sally and Bob</a>
+                    </td>
+                    <td class="fs-6 fst-italic date-created">
+                    YYYY/MM/DD
+                    </td>
+                    <td class="fs-6" >
+					<button class="btn-link p-1 m-0 bg-white border-0 text-decoration-none" title="Archived record">
+					  Archived <i class="fa-solid fa-box-archive"></i>
+					</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" >First Name Last Name</a>
+                    </td>
+                    <td class="fs-6 fst-italic date-created">YYYY/MM/DD</td>
+                    <td class="fs-6" >
+					<button class="btn-link p-1 m-0 bg-white border-0 text-decoration-none" title="Archived record">
+					  Archived <i class="fa-solid fa-box-archive"></i>
+					</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" >First Name Last Name</a>
+                    </td>
+                    <td class="fs-6 fst-italic date-created">YYYY/MM/DD</td>
+                    <td class="fs-6" >
+					<button class="btn-link p-1 m-0 bg-white border-0 text-decoration-none" title="Archived record">
+					  Archived <i class="fa-solid fa-box-archive"></i>
+					</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  class="fs-6">
+                      <a role="link" href="customer-client-editor.html" >First Name Last Name</a>
+                    </td>
+                    <td class="fs-6 fst-italic date-created">YYYY/MM/DD</td>
+                    <td class="fs-6" >
+					<button class="btn-link p-1 m-0 bg-white border-0 text-decoration-none" title="Archived record">
+					  Archived <i class="fa-solid fa-box-archive"></i>
+					</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class=" my-4">
+                <p class="UX_note">
+                 An archived client cannot be edited by the client or your staff admins. <strong>Unarchive</strong> a client to make edits if necessary, then re-archive them.</p>
+
+			<p>
+				Return to your <a href="customer-portal-home.html">Client Portal home</a>.
+            </p>
+                
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Customer Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-12 col-lg-8 m-lg-auto pb-3">
+          <div class="footer-menu d-flex flex-row justify-content-center gap-5">
+            <a href="customer-portal-home.html" 
+            	class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Home</a>
+			<a href="customer-account-manager.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Your Account</a>
+			<a href="support.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Support</a>
+            <a href="customer-login.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Sign out</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8  m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Account Manager | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header class="container bg-white border-5 border-bottom border-dark-subtle">
+      <div class="row py-4">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto text-center">
+          <div class="main-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/client_logo_example.png"
+              alt="Your customer logo" />
+          </div>
+          <div class="brand-title">
+            <h2 class="text-capitalize mb-lg-0 fs-4">
+              Welcome to <span class="fw-bold">Event Organizer Pro</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Subscription display -->
+      <section class="container py-lg-5 py-3">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <div class="heading-area">
+              <h3>Your Account Manager</h3>
+              <p>
+                You can add and remove staff admins, and manage your subscription and billing information here. Please <a href="support.html">contact us</a> if you have questions.
+              </p>
+            </div>
+            
+            <fieldset>
+            <h5>
+            	Your subscription plan:
+            </h5>
+            <p>
+			<i class="fa-solid fa-check-circle me-2"></i>
+Timeline Manager.  <span class="UX_note ms-2">Monthly Unlimited Clients $145/mo</span>
+            </p>
+            <p>
+			<i class="fa-solid fa-check-circle me-2"></i>
+Menu Quoting.  <span class="UX_note ms-2">Monthly 50 Clients $350/mo</span>
+            </p>
+            </fieldset>
+            <p class="text-secondary">
+            To upgrade, remove a module, or cancel your account, please <a href="support.html">contact us</a>. Billing is monthly and cancellations take effect at the end of the month.
+            </p>
+          </div>
+        </div>
+      </section>
+
+<!-- View and Add admins -->
+      <section class="container mt-4 ">
+        <!-- Hr line -->
+        <div class="row pb-3">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <h3 class="text-capitalize heading-area fs-2">
+            User Management
+            </h3>
+            <p>
+            This section shows your primary account owner and any staff admins who can interact with your clients, lock event forms, add new clients, and archive completed ones.
+            </p>
+	<fieldset>
+            <form action="customer-portal-home.html" class="customer-editing">
+			<div class="mb-3">
+				<i class="fa-solid fa-user-circle"></i>
+                <label
+                  for="staff-name"
+                  class="form-label fw-bold text-capitalize fs-6 fc-red">
+                  Staff Name <span class="text-primary">(Primary)</span>
+                  </label>
+                <input
+                  type="text"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="staff-name"
+                  placeholder="Staff member's name"
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="staff-email"
+                  class="form-label fw-bold text-capitalize fs-6" >
+                  Company Email
+                  </label>
+                <input
+                  type="email"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="staff-email"
+                  placeholder="email@example.com" />
+              </div>
+              
+              <div class="mb-3">
+                <label
+                  for="staff-email"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Cell Phone
+                  </label>
+                <input
+                  type="tel"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="staff-email"
+                  placeholder="Include area code" />
+              </div>
+
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-primary">
+                  Save changes
+                </button>
+					<!-- or use this button if no field was edited yet 
+					<button type="submit" class="btn btn-primary disabled">
+					No unsaved changes
+					</button>
+					-->
+              </div>
+            </form>
+            <p class="UX_note pt-3 ">
+            	Note: This contact cannot be deleted, as it is the primary account holder. This contact info is shown to your clients in their Portal.
+            	</p>
+	</fieldset>
+
+	            <div class="add-btn text-end">
+              <!-- Add Admin btn -->
+                <button type="submit" class="btn btn-secondary py-1">
+				<i class="fa-solid fa-square-plus me-2"></i>
+                  Add new Staff Admin
+                </button>
+                <!-- auto-scroll to the new form which appeared below via JS -->
+            </div>
+            <!-- Add/Edit new admin form -->
+
+	<fieldset>
+            <form action="customer-portal-home.html" class="customer-editing">
+			<div class="mb-3">
+				<i class="fa-solid fa-user-circle"></i>
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Staff Name 2 </label>
+                <input
+                  type="text"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="Staff member's name" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6" >
+                  Company Email
+                  </label>
+                <input
+                  type="email"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="email@example.com" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Cell Phone
+                  </label>
+                <input
+                  type="tel"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="Include area code" />
+              </div>
+
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-primary">
+                  Save changes
+                </button>
+					<!-- or use this button if no field was edited yet 
+					<button type="submit" class="btn btn-primary disabled">
+					No unsaved changes
+					</button>
+					-->
+              </div>
+				
+              <input type="checkbox" name="checkbox" id="staff-delete-verify">
+              <label for="checkbox" class="UX_note pt-2">
+				  Check this box to delete this staff admin (Primary only) </label>
+            </form>
+</fieldset>
+
+			  
+<!-- April 2, 2023 = example of the Staff Admin's table with the EDIT pencil (if its theirs). The edit mode is activated on this same page.  -->
+
+	<fieldset>
+            <form action="customer-portal-home.html" class="customer-editing">
+			<div class="mb-3">
+				<i class="fa-solid fa-user-circle"></i>
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Staff Name 3&nbsp; </label>
+                <input
+                  type="text"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="Staff member's name" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6" >
+                  Company Email
+                  </label>
+                <input
+                  type="email"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="email@example.com" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label fw-bold text-capitalize fs-6">
+                  Cell Phone
+                  </label>
+                <input
+                  type="tel"
+                  class="form-control bg-secondary-subtle border-0 py-3 fs-6 text-dark"
+                  id="exampleFormControlInput1"
+                  placeholder="Include area code" />
+              </div>
+
+            <a href=""><i class="fa-solid fa-user-edit text-primary-emphasis"></i></a>
+				<!-- viewable by only the PRIMARY or the logged-in Staff admin. -->
+
+		</form>
+</fieldset>
+			  
+		<p class="UX_note"> The <strong>Primary admin</strong> can edit their own and any staff member's details.  Staff-level Admins  can edit only their own Name/Email/Cellphone. To change any admin's password, have them use the <a href="customer-password-reset.html">Password Reset form</a>.
+		</p>
+		</div>
+        </div>
+      </section>
+    </main>
+    <!-- Customer Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-12 col-lg-8 m-lg-auto pb-3">
+          <div class="footer-menu d-flex flex-row justify-content-center gap-5">
+            <a href="customer-portal-home.html" 
+            	class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Home</a>
+			<a href="customer-account-manager.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Your Account</a>
+			<a href="support.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Support</a>
+            <a href="customer-login.html"
+              class="d-inline-block text-dark text-capitalize fs-6 fw-bold">Sign out</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8  m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

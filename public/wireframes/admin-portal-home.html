@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Event Organizer Pro</title>
+    <!-- Bootstrap 5.2 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header starts-->
+    <header
+      class="container bg-white border-5 border-bottom border-dark-subtle"
+    >
+      <div class="row py-4">
+        <div
+          class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto d-flex align-items-center gap-lg-4 gap-3"
+        >
+          <div class="event-logo">
+            <img
+              class="img-fluid"
+              src="assets/images/event-calander.png"
+              alt="Event Calander"
+            />
+          </div>
+          <div class="brand-title">
+            <h2 class="fw-bold text-capitalize mb-lg-0">Event Organizer Pro</h2>
+            <h3 class="text-capitalize mb-lg-0">Admin manager</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main area starts -->
+    <main>
+      <!-- Admin manager -->
+      <section class="container admin-login pt-5">
+        <div class="row">
+          <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+            <h3>Our Customers</h3>
+            <p>
+            	Customers can include wedding barns, venues, hotels, caterers, and wedding coordinators.
+            </p>
+            
+            <!-- Clients views -->
+            <div class="customers border border-2 border-secondary-subtle rounded-3">
+            
+              <table class="table table-borderless table-hover m-0">
+                <thead>
+                <th>Customer Name</th>
+                <th>Admin</th>
+                <th>Plan</th>
+                <th>Edit Customer</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td >
+                      <h5>The Red Barn</h5>
+                      View their <a href="admin-customer-client-details.html" class="text-dark fst-italic" title="Read-only mode" > 22 clients</a>
+                    </td>
+                    <td>
+                    	Bob Jones
+                    </td>
+                    <td>
+                    	Monthly $150
+                    </td>
+                    <td class="">
+                      <a href="admin-customer-editor.html" class="h5  m-0 bg-transparent" title="Edit this customer">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td>
+                      <h5>Barn Lights</h5>
+                      View their <a href="admin-customer-client-details.html" class="text-dark fst-italic" title="Read-only mode" > 14 clients</a>
+                    </td>
+                    <td>
+                    	Marcy Stuart
+                    </td>
+                    <td>
+                    	Monthly $175
+                    </td>
+                    <td class="">
+                      <a  href="admin-customer-editor.html" class="h5  m-0 bg-transparent" title="Edit this customer">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h5>Oak Ridge</h5>
+                      View their <a href="admin-customer-client-details.html" class="text-dark fst-italic" title="Read-only mode" > 2 clients</a>
+                    </td>
+                    <td>
+                    	Alice Jones
+                    </td>
+                    <td>
+                    	Monthly $300
+                    </td>
+                    <td class="">
+                      <a  href="admin-customer-editor.html" class="h5 m-0 bg-transparent" title="Edit this customer">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                     </th>
+                    <th>
+                     </th>
+                    <th>
+                    	Total Monthly: $500
+                    </th>
+                    <th class="">
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="add-customer my-5">
+              <p>
+                Add new customers, manage their admins, view usage reports, and
+                other tasks
+              </p>
+        <form action="admin-customer-editor.html">
+                <button type="submit" class="btn btn-secondary">
+					<i class="fa-solid fa-square-plus me-2"></i> Add Customer
+                </button>
+        </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Admin Footer starts-->
+    <footer class="container bg-white pt-5 pb-3">
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-11 m-auto col-md-10 m-md-auto col-lg-10 m-lg-auto">
+          <p>&copy; Event Organizer Pro LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap 5.2 JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Font awesome JS -->
+    <script src="assets/js/fontawesome.min.js"></script>
+  </body>
+</html>

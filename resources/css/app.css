@@ -1,0 +1,308 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.to-change{
+  color: red;
+  text-decoration: underline;
+  text-decoration-color:red ;
+}
+
+/* From Style.css wireframe              */
+/*****************************************/
+
+/* Fonts */
+html{
+  min-height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto !important;
+  font-family: "PT Sans", sans-serif;
+  background-color: #f5f5f5 !important;
+  color: #171717; /* almost black */
+  max-width: 992px !important;
+}
+
+/** Header area CSS **/
+.welcome-notes h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.125rem;
+}
+
+.heading-area h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.125rem;
+}
+
+.cursive-font {
+  font-family: "Satisfy", cursive !important;
+  font-size: 2.5rem !important;
+}
+.welcome-notes h1 {
+  text-transform: capitalize;
+}
+
+.welcome-notes h1 img{
+  display: inline;
+}
+
+/* Common CSS */
+
+.container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+h1,
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+h5 { font-weight: bold !important; }
+
+p,
+table td {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+}
+
+table th {
+	background-color: #eee !important;
+}
+
+.UX_note {
+	font-size: 86%; font-weight:normal !important;
+}
+
+.client-status { background-color: #eee !important;
+		padding: .5em;
+		margin: 1em 1em 2em 0;
+		border-radius: .75em;
+}
+	.lock i {
+	  font-size: 16px;
+	}
+
+
+.event-tabs a.nav-link:hover {
+	color: #0e6efb !important;
+}
+
+/** Universal Form styling **/
+
+input::placeholder {
+	color: #aaa !important;
+	opacity: 1;
+	font-style: italic;
+}
+
+
+.fieldset { 
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em 0em;
+}
+
+.form-label,
+.btn {
+  font-size: 1.05rem;
+}
+
+input.edit-disabled { background-color: #dedede !important;}
+
+input[type="radio"] { margin-left: .5em; border: 1px solid; }
+
+input[type="radio"]:checked + label { color: blue; }
+input[type="checkbox"] { cursor: pointer; }
+
+
+/** Footer area CSS **/
+
+footer p {
+  font-size: 1rem;
+}
+
+.button-link{
+  text-decoration: underline;
+}
+
+/* From admin.css wireframe              */
+/*****************************************/
+/* Common CSS */
+.admin-login,
+.customer-login,
+.client-login {
+  padding-bottom: 237px;
+}
+
+.brand-title h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+}
+
+.admin-font h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+}
+
+/* Header - Event CSS */
+.event-logo img {
+  width: 140px;
+}
+
+.account-page img{
+  display: inline !important;
+}
+/* Breadcrum title */
+.breadcrumb .fs-6 {
+  font-size: 1.5rem !important;
+}
+/* Customers CSS */
+.customers td {
+  padding: 18px !important;
+}
+
+/* Photo icon CSS */
+.photo-icon i {
+  font-size: 3rem;
+  color: #b6b4b4;
+}
+
+.company-photo{
+  width: 100%;
+  display: block !important;
+  margin-bottom: 10px;
+}
+
+/* Upload file CSS */
+.customer-editing .input-group {
+  width: 60%;
+}
+.file-hide::-webkit-file-upload-button {
+  visibility: hidden;
+  position: relative;
+  outline: none;
+}
+.file-hide::before {
+  content: "Upload...";
+  display: inline-block;
+  font-style: italic;
+  border: 2px solid #a3a3a3;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.header-logo img{
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.main-logo img{
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* Client List CSS */
+
+.date-created { }
+
+/* User Management CSS */
+#createAdmin{
+  display: none;
+}
+
+.edit-user-btn{
+  cursor: pointer;
+}
+
+.edit-permissions{
+  display: none;
+}
+
+/* Venue CSS */
+.copy-url{
+  cursor: pointer;
+  color: #0e6efb;
+}
+
+
+/* Event tabs CSS */
+.event-tabs .nav {
+  justify-content: space-between;
+}
+.event-tabs .nav .active {
+  color: #0e6efb !important;
+  position: relative;
+}
+.event-tabs .nav .active::after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-color: #0e6efb;
+  position: absolute;
+  left: 0;
+  bottom: -54%;
+
+}
+/* alert fade animations */
+#alert{
+  position: fixed;
+  /* right: 40%; */
+  margin: 0 auto;
+  bottom: 0;
+  background-color: white;
+  margin-top: 10px;
+  border: none;
+  box-shadow: -3px 4px 9px #888888;
+  z-index: 100;
+}
+
+.alert-success{ border-left: 5px solid #146c43 !important;}
+.alert-danger{ border-left: 5px solid #b02a37 !important}
+.alert-warning{ border-left: 5px solid #997404 !important}
+.alert-info{ border-left: 5px solid #087990 !important}
+
+.fade-out-image{
+  animation: fadeOut 100s;
+  -webkit-animation: fadeOut 100s;
+  -moz-animation: fadeOut 100s;
+  -o-animation: fadeOut 100s;
+  -ms-animation: fadeOut 100s;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: ; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
