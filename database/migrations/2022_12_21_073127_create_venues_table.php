@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("url_handle")->unique();
             $table->string("logo");
             $table->string("plan_price")->default(150);
-            $table->string("menu_plan_price")->default(null);
+            $table->string("menu_plan_price")->default(null)->nullable();
             $table->boolean("timeline_organizer")->default(0);
             $table->boolean("menu_designer")->default(0);
             $table->boolean("is_active")->default(1);
