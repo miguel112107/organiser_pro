@@ -20,7 +20,7 @@
 
 
     <!-- Scripts -->
-    @vite(['/resources/css/app.css', '/resources/sass/app.scss', '/resources/js/app.js','/resources/css/responsive.css', '/resources/css/bootstrap.min.css'])
+    @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js','resources/css/responsive.css', 'resources/css/bootstrap.min.css'])
 </head>
 
 <body>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=PT+Sans:wght@400;700&family=Satisfy&display=swap">
 
     <!-- Scripts -->
-    @vite(['/resources/css/app.css', '/resources/sass/app.scss', '/resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
