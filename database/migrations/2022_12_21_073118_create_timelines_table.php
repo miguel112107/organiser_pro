@@ -53,7 +53,7 @@ return new class extends Migration
             $table->string("dessert_display")->nullable();
             $table->integer("linens_napkins")->nullable();
             $table->string("chargers")->nullable();
-            $table->integer("table_layout_couple"->nullable());
+            $table->integer("table_layout_couple")->nullable();
             $table->integer("table_layout_guests")->nullable();
             $table->text("table_layout_notes")->nullable();
             $table->string("lawn_games")->nullable();
