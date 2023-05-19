@@ -1,39 +1,51 @@
 <?php
-
+  
 namespace App\Http\Controllers;
-
+   
 use Illuminate\Http\Request;
-
+use App\Http\Requests;
+use Image;
+  
 class ImageController extends Controller
 {
-    // View File To Upload Image
-    public function index()
+  
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function resizeImage()
     {
-        return view('image-form');
+        return view('resizeImage');
     }
-
-    // Store Image
-    public function storeImage(Request $request)
+  
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function resizeImage(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image',
+        $this->validate($request, [
+            'title' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-        $imageName = time().'.'.$request->logo->extension();
-        var_dump($imageName);
-
-        // Public Folder
-        $request->logo->move(public_path('images'), $imageName);
-
-        // //Store in Storage Folder
-        // $request->image->storeAs('images', $imageName);
-
-        // // Store in S3
-        // $request->image->storeAs('images', $imageName, 's3');
-
-        //Store IMage in DB 
-
-
-            return back()->with('success', 'Image uploaded Successfully!');
+  
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->extension();
+     
+        $destinationPath = public_path('/thumbnail');
+        $img = Image::make($image->path());
+        $img->resize(100, 100, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['imagename']);
+   
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
+   
+        return back()
+            ->with('success','Image Upload successful')
+            ->with('imageName',$input['imagename']);
     }
+   
 }

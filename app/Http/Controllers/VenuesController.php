@@ -202,6 +202,8 @@ class VenuesController extends Controller
                 
                 // Public Folder
                 $request->image->move(public_path('images/upload-images'), $imageName);
+
+                (new ImageController)->resizeImage($request);
             }
 
             $ownerUpdate = User::find($venue->owner);

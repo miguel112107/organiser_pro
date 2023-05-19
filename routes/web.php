@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\NotificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,10 @@ Route::post('/admin-login', [AdminAuthController::class, 'adminLogin'])->name('a
 Route::post('/contact', '\App\Http\Controllers\ContactUsFormController@ContactUsForm');
 
 Route::middleware(['auth'])->group(static function () {
+
+    Route::get('resizeImage', [ImageController::class, 'resizeImage']);
+    Route::post('resizeImage', [ImageController::class, 'resizeImage'])->name('resizeImage');
+
     Route::resource('/wedding', '\App\Http\Controllers\WeddingsController');
     Route::resource('/venue', '\App\Http\Controllers\VenuesController');
     Route::resource('/timeline', '\App\Http\Controllers\TimelinesController');
