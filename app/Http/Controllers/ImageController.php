@@ -29,13 +29,13 @@ class ImageController extends Controller
         $image = $request->file('image');
         $input['imagename'] = time().'.'.$image->extension();
      
-        $destinationPath = public_path('/thumbnail');
+        $destinationPath = public_path('/images/upload-images/thumbnail');
         $img = Image::make($image->path());
         $img->resize(100, 100, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$input['imagename']);
    
-        $destinationPath = public_path('/images');
+        $destinationPath = public_path('/images/upload-images');
         $image->move($destinationPath, $input['imagename']);
    
         // return back()
