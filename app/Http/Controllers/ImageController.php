@@ -14,10 +14,6 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function resizeImage()
-    {
-        return view('resizeImage');
-    }
   
     /**
      * Show the form for creating a new resource.
