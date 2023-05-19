@@ -23,8 +23,7 @@ class ImageController extends Controller
     public function resizeImage(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
   
         $image = $request->file('image');
@@ -39,9 +38,9 @@ class ImageController extends Controller
         $destinationPath = public_path('/images');
         $image->move($destinationPath, $input['imagename']);
    
-        return back()
-            ->with('success','Image Upload successful')
-            ->with('imageName',$input['imagename']);
+        // return back()
+        //     ->with('success','Image Upload successful')
+        //     ->with('imageName',$input['imagename']);
     }
    
 }

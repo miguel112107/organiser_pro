@@ -201,7 +201,7 @@ class VenuesController extends Controller
                 $imageName = time() . '.' . $request->image->extension();
                 
                 // Public Folder
-                $request->image->move(public_path('images/upload-images'), $imageName);
+                // $request->image->move(public_path('images/upload-images'), $imageName);
 
                 (new ImageController)->resizeImage($request);
             }
