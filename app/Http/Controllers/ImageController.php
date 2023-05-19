@@ -31,7 +31,7 @@ class ImageController extends Controller
      
         $destinationPath = public_path('/images/upload-images/');
         $img = Image::make($image->path());
-        $img->resize(100, 100, function ($constraint) {
+        $img->resize(300, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$input['imagename']);
    
